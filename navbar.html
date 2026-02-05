@@ -3,68 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEPTEP INASAL</title>
+    <title>Portfolio project nav bar</title>
+
     <style>
-        /* Internal CSS */
         * {
             box-sizing: border-box;
-            margin: 10;
-            padding: 10;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #121212;
+            color: #fff;
         }
 
         .navbar {
-            position: sticky; /* sticky navbar */
+            position: sticky;
             top: 0;
-            background-color: #90ee90; /* navbar background color */
+
+            /* Glassmorphism */
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
             padding: 15px 20px;
             display: flex;
-            justify-content: space-between; /* logo left, menu right */
+            justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #ffffff; /* optional border */
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
         }
 
         .navbar .menu {
             display: flex;
+            align-items: center;
         }
 
         .navbar .menu div {
-            margin-left: 20px; /* spacing between menu items */
-            color: #ffffff; /* menu text color white for contrast */
-            font-weight: bold;
+            margin-left: 20px;
+            color: #eaeaea;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             cursor: pointer;
-            
         }
 
         .navbar .menu div:hover {
-            color: #a8d5a2; /* hover effect */
+            color: #0b7878;
         }
 
-        .logo {
-            width: 50px; /* adjust logo size */
-            height: 50px;
+        /* Search box */
+        .navbar input[type="search"] {
+            margin-left: 20px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            outline: none;
+            font-size: 13px;
         }
 
+        .navbar input::placeholder {
+            color: #ddd;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="navbar">
-        <img src="logo.png" alt="Chicken Head" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
+
         <div class="menu">
             <div>Home</div>
             <div>About</div>
             <div>Menu</div>
             <div>Contact</div>
+
+            <!-- Added search box -->
+            <input type="search" placeholder="Search...">
         </div>
     </div>
 
-    <h1>SAVOR THE ART OF TASTE</h1>
-    <p>Welcome to Tep-Tep Inasal.Home of flavorful grilled chicken and busog-sulit meals
-    that hit the spot. From the first sizzle to the last scoop of unli rice, every bite is made to satisfy your cravings and make you feel at home. </p>
-
 </body>
 </html>
+
